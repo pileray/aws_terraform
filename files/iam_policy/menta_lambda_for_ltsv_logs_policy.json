@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": "logs:CreateLogGroup",
+          "Resource": "arn:aws:logs:ap-northeast-1:908231638687:*"
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "logs:CreateLogStream",
+              "logs:PutLogEvents"
+          ],
+          "Resource": [
+              "arn:aws:logs:ap-northeast-1:908231638687:log-group:/aws/lambda/menta_lambda_for_ltsv_logs:*"
+          ]
+      }
+  ]
+}
